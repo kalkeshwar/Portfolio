@@ -50,37 +50,39 @@ const About = () => {
           {/* profilecard */}
           <div className=" md:w-1/2 h-full p-10 md:flex justify-center items-center vsm:hidden">
               <motion.div className='relative w-[100%] h-[100%] p-24 '
-                initial={{opacity:0}}
-                animate={{opacity:1}}
-                transition={{duration: 1, type:'spring', bounce:0.3}}
+                initial={{opacity:0,scale:0}}
+                animate={{opacity:1,scale:1 }}
+                transition={{duration: 1, ease:"easeInOut"}}
               >
                 <Image src="/totalicon.svg" alt='Profile Picture' layout="fill" objectFit='contain' className=''/>
               </motion.div> 
           </div>
         </div>
       </div>
+      {/* Education */}
       <div className="w-full flex items-center justify-center">
-        <div className="border border-black w-[80%] rounded-lg p-5 flex flex-col gap-5">
+        <div className=" border-black border-2 w-[80%] rounded-lg p-5 flex flex-col gap-5 shadow-black">
           <div className='text-4xl font-bold underline'>Education</div>
           <div className="w-full flex flex-row items-center gap-12">{Education.map((item,index)=>(
             <div className={`${index===ind ? 'bg-black text-white rounded-md p-2 font-bold' : 'text-black font-bold'} cursor-pointer`} key={index} onClick={()=>handleIndex(index)}>{item.Course}</div>
           ))}
           </div>
+          <div className='bg-black w-full h-[1px]'></div>
           <div>
             {Education[ind].Institution && (
-              <div><span className='font-bold'>Institution : </span> <span>{Education[ind].Institution}</span></div>
+              <div><span className='font-bold'>Institution : </span> <span className='font-mono'>{Education[ind].Institution}</span></div>
             )}
             {Education[ind].Course && (
-              <div ><span className='font-bold'>Course : </span> <span>{Education[ind].Course}</span></div>
+              <div ><span className='font-bold'>Course : </span> <span className='font-mono'>{Education[ind].Course}</span></div>
             )}
             {Education[ind].Stream && (
-              <div><span className='font-bold'>Stream : </span> <span>{Education[ind].Stream}</span></div>
+              <div><span className='font-bold'>Stream : </span> <span className='font-mono'>{Education[ind].Stream}</span></div>
             )}
             {Education[ind].year && (
-              <div><span className='font-bold'>Year : </span> <span>{Education[ind].year}</span></div>
+              <div><span className='font-bold'>Year : </span> <span className='font-mono'>{Education[ind].year}</span></div>
             )}
             {Education[ind].place && (
-              <div><span className='font-bold'>Location : </span> <span>{Education[ind].place}</span></div>
+              <div><span className='font-bold'>Location : </span> <span className='font-mono'>{Education[ind].place}</span></div>
             )}
           </div>
         </div>
@@ -88,12 +90,19 @@ const About = () => {
       <div className='vsm:hidden sm:flex md:flex'>
        <Skills/>
       </div>
-      <div className="w-full flex md:hidden">
+      <div className="w-full flex md:hidden p-10">
         <div className='flex flex-row gap-5 flex-wrap'>
           <MobileSkillBox name="javascript"/>
-          <MobileSkillBox name="javascript"/>
-          <MobileSkillBox name="javascript"/>
-          <MobileSkillBox name="javascript"/>
+          <MobileSkillBox name="ReactJs"/>
+          <MobileSkillBox name="NodeJs"/>
+          <MobileSkillBox name="MongoDB"/>
+          <MobileSkillBox name="Python"/>
+          <MobileSkillBox name="HTML"/>
+          <MobileSkillBox name="Tailwind CSS"/>
+          <MobileSkillBox name="Data Structures and Algorithm"/>
+          <MobileSkillBox name="Docker"/>
+          <MobileSkillBox name="NextJs"/>
+          <MobileSkillBox name="Redux"/>
         </div>
       </div>
     </div>

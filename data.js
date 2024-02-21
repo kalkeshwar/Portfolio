@@ -20,6 +20,7 @@ export const Education=[
     {
         Institution:"Excellencia Junior College",
         Course:"Intermediate",
+        Stream:"MPC",
         percentage:"97.5",
         place:"Hyderabad,Telangana" ,
         year:"2018-2020",

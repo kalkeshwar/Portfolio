@@ -42,6 +42,7 @@ const Navbar = () => {
                 {linkItems.map((item,index)=>(
                     <Link href={item.href} key={index}
                     className={`${pathName===item.href && "bg-black text-white"} px-1 py-0.5 rounded-md`}
+                    prefetch
                     >
                         {item.title}
                     </Link>

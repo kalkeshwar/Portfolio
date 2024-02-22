@@ -9,6 +9,7 @@ const Contact = () => {
     const text=['s','a','y','\u00A0','h','e','l','l','o','😊']
     const [success,setSuccess]=useState(false)
     const [error,setError]=useState(false)
+    
     const form=useRef()
     
     const emailSend=(e)=>{

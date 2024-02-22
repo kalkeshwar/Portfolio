@@ -29,7 +29,7 @@ const About = () => {
           <motion.div className='flex flex-col px-10 gap-10 md:w-1/2 vsm:w-full'
             initial={{y:30}}
             animate={{y:0}}
-            transition={{duration: 1, ease:"easeInOut", bounce:0.3}}
+            transition={{duration: 1, ease:"easeInOut"}}
           >
               <motion.h2 className='text-xl font-serif font-bold'>A Little more about Me...</motion.h2>
               <motion.div className='font-serif md:text-xl'>Hello! I&apos;m Kalkeshwar Yamsani, a final-year 
@@ -50,9 +50,9 @@ const About = () => {
           {/* profilecard */}
           <div className=" md:w-1/2 h-full p-10 md:flex justify-center items-center vsm:hidden">
               <motion.div className='relative w-[100%] h-[100%] p-24 '
-                initial={{opacity:0,scale:0}}
-                animate={{opacity:1,scale:1 }}
-                transition={{duration: 1, ease:"easeInOut"}}
+                initial={{scale:0}}
+                animate={{scale:1 }}
+                transition={{duration: 1, ease:"easeOut"}}
               >
                 <Image src="/totalicon.svg" alt='Profile Picture' layout="fill" objectFit='contain' className=''/>
               </motion.div> 

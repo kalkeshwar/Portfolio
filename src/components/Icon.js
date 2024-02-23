@@ -6,7 +6,7 @@ export const GithubIcon = ({className, ...rest}) => (
     width="1em"
     height="1em"
     viewBox="0 0 256 256"
-    className={`w-full h-auto ${className}`}
+    className={`h-auto ${className}`}
     {...rest}
   >
     <g fill="none">

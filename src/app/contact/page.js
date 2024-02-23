@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react'
 import {motion} from 'framer-motion'
 import emailJs from "@emailjs/browser"
 import Navbar from '@/components/Navbar'
+import TransitionEffect from '@/components/TransitionEffect'
 
 const Contact = () => {
 
@@ -35,6 +36,7 @@ const Contact = () => {
 
     return (
         <>
+            <TransitionEffect/>
             <Navbar/>
             <div className='w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100 flex md:flex-row vsm:flex-col vsm:p-10'>
                 <div className="lg:w-1/2 md:w-[40%] vsm:w-full vsm:h-[50vh] md:h-[100vh] flex justify-center items-center lg:text-6xl md:text-3xl vsm:text-3xl">

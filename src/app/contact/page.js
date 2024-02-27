@@ -51,13 +51,13 @@ const Contact = () => {
                 ))}
                 </div>
                 <div className='p-5 vsm:p-0 lg:w-1/2  vsm:w-full vsm:h-auto md:w-[60%] h-auto flex justify-center items-center '>
-                    <form ref={form} onSubmit={emailSend} className='lg:w-[90%] md:w-[100%] vsm:w-full h-[85%] sm:p-24 vsm:p-10 bg-red-50 flex flex-col gap-10 text-black rounded-xl'>
+                    <form ref={form} onSubmit={emailSend} className='lg:w-[90%] md:w-[100%] vsm:w-full sm:p-24 vsm:p-[2rem] bg-red-50 flex flex-col gap-10 text-black rounded-xl h-auto'>
                         <span className='font-medium'>Dear Kalkeshwar,</span>
-                        <textarea name="user_message" cols={12} rows={6} className=' bg-transparent border-b-2 border-b-black outline-none h-20'></textarea>
+                        <textarea name="user_message" cols={12} rows={6} className=' bg-transparent border-b-2 border-b-black outline-none md:h-20 vsm:h-[2rem]'></textarea>
                         <span className='font-medium'>Mail address</span>
                         <input type="email" name='user_mail' className='bg-transparent border-b-2 border-b-black outline-none h-5' />
                         <span className='font-medium'>Regards</span>
-                        <button className="bg-purple-300 rounded font-semibold text-white p-4">
+                        <button className="bg-purple-300 rounded font-semibold text-white md:p-4 vsm:p-3">
                             Send
                         </button>
                         {success && (

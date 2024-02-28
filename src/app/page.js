@@ -33,7 +33,7 @@ export default function Home() {
                 Crafting the Designs into Real world entities.passion for coding ,creating innovative and user-friendly web applications and a knack for understanding user needs.
               </div>
               <div className='w-full flex items-center gap-20 pr-20 my-3 vsm:px-2'>
-                <button className='bg-black text-white px-1 py-1 rounded-md w-24 h-12'>Resume</button>
+                <button className='bg-black text-white px-1 py-1 rounded-md w-24 h-12'><Link href='https://drive.google.com/file/d/1KKkXDqXTS84upAZzo3ru_pEcOQ1MBkpf/view?usp=sharing' target='__blank'>Resume</Link></button>
                 <button className='bg-white text-black px-1 py-1 rounded-md w-24 h-12'><Link href="/contact">Contact</Link></button>
               </div>
             </motion.div>

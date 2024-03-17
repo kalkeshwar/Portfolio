@@ -126,7 +126,8 @@ const About = () => {
         <div className="vsm:hidden sm:flex md:flex">
           <Skills />
         </div>
-        <div className="w-full flex md:hidden p-10">
+        <div className="w-full flex flex-col gap-10 md:hidden p-10">
+          <div className="text-4xl font-semibold underline">Skills</div>
           <div className="flex flex-row gap-5 flex-wrap">
             <MobileSkillBox name="javascript" />
             <MobileSkillBox name="ReactJs" />

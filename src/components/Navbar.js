@@ -24,11 +24,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
+  const handleOpenNav = ()=>{
+    setIsOpen((prev)=>!prev)
+  }
+
   const pathName = usePathname();
   console.log(pathName);
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  //for showing navbar on scroll down and hiding when scrolling
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -124,22 +129,20 @@ const Navbar = () => {
             <HashnodeIcon />
           </motion.a>
         </motion.div>
-        <div
-          className="relative right-5 z-50 md:hidden w-8 h-auto"
-          onClick={() => setIsOpen((prev) => !prev)}
-        >
-          <button className="w-full flex items-center justify-center flex-col gap-2">
-            <div
-              className={`${isOpen ? "bg-white" : "bg-black"} w-full h-1`}
-            ></div>
-            <div
-              className={`${isOpen ? "bg-white" : "bg-black"} w-full h-1`}
-            ></div>
-            <div
-              className={`${isOpen ? "bg-white" : "bg-black"} w-full h-1`}
-            ></div>
-          </button>
-        </div>
+        {
+          !isOpen?(
+            <div className='md:hidden vsm:flex flex-col gap-1 relative right-5' onClick={handleOpenNav}>
+              <div className='w-6 h-1 bg-black'></div>
+              <div className='w-6 h-1 bg-black'></div>
+              <div className='w-6 h-1 bg-black'></div>
+            </div>
+          ):(
+            <div className='relative top-0 w-7 h-1 right-5 md:hidden z-50' onClick={handleOpenNav}>
+              <div className='w-7 h-1 bg-white rotate-45 absolute top-0 left-0'></div>
+              <div className='w-7 h-1 bg-white -rotate-45 absolute top-0 right-0'></div>
+            </div>
+          )
+        }
         <div
           className={`absolute top-0 left-0 w-screen h-screen bg-black flex flex-col px-40 py-20 items-center justify-start gap-10 self-center md:hidden z-30 ${
             isOpen ? "vsm:flex" : "vsm:hidden"

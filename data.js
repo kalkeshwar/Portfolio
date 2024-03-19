@@ -25,7 +25,7 @@ export const projectDetails= [
     },
     {
         name:"guide2Hyd",
-        websiteUrl: "",
+        websiteUrl: "https://vkkumar2002.github.io/guide2HYD/",
         githubUrl:"https://github.com/kalkeshwar/guide2HYD",
         imageUrl: "/guide2HYD.png" , 
         description:"Developed a web application using HTML, CSS, and JavaScript, designed to assist individuals in Hyderabad with quick access to essential information about top tourism spots, hospitals, colleges, forest areas, and other relevant data.",
